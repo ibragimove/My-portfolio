@@ -1,0 +1,69 @@
+:root {
+  /* Default: Dark Theme (Midnight × Electric Orange) */
+  --color-bg: #111315;
+  --color-surface: #202428;
+  --color-surface-hover: #292E34;
+  --color-surface-active: #323840;
+  --color-text: #F4F1EA;
+  --color-text-secondary: #A6ADB4;
+  --color-text-muted: #6B7280;
+  --color-accent: #FF7547;
+  --color-accent-hover: #FF8B64;
+  --color-accent-subtle: rgba(255, 117, 71, 0.12);
+  --color-accent-border: rgba(255, 117, 71, 0.35);
+  --color-accent-glow: rgba(255, 117, 71, 0.25);
+  --color-accent-contrast: #111315;
+  --color-border: #343A40;
+  --color-border-subtle: #24292E;
+  --color-border-strong: #4A5159;
+
+  color-scheme: dark;
+}
+
+/* Light Theme */
+[data-theme="light"],
+html.light,
+:root:has(> head > meta[name="color-scheme"][content="light"]) {
+  --color-bg: #F7F5F0;
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #F2EFE8;
+  --color-surface-active: #E9E5DD;
+  --color-text: #17191B;
+  --color-text-secondary: #626A70;
+  --color-text-muted: #8E969D;
+  --color-accent: #E85F35;
+  --color-accent-hover: #D65027;
+  --color-accent-subtle: rgba(232, 95, 53, 0.08);
+  --color-accent-border: rgba(232, 95, 53, 0.30);
+  --color-accent-glow: rgba(232, 95, 53, 0.18);
+  --color-accent-contrast: #FFFFFF;
+  --color-border: #E2DED6;
+  --color-border-subtle: #ECE8E0;
+  --color-border-strong: #CFC9BE;
+
+  color-scheme: light;
+}
+
+/* Dark Theme explicit selector */
+[data-theme="dark"],
+html.dark,
+:root:has(> head > meta[name="color-scheme"][content="dark"]) {
+  --color-bg: #111315;
+  --color-surface: #202428;
+  --color-surface-hover: #292E34;
+  --color-surface-active: #323840;
+  --color-text: #F4F1EA;
+  --color-text-secondary: #A6ADB4;
+  --color-text-muted: #6B7280;
+  --color-accent: #FF7547;
+  --color-accent-hover: #FF8B64;
+  --color-accent-subtle: rgba(255, 117, 71, 0.12);
+  --color-accent-border: rgba(255, 117, 71, 0.35);
+  --color-accent-glow: rgba(255, 117, 71, 0.25);
+  --color-accent-contrast: #111315;
+  --color-border: #343A40;
+  --color-border-subtle: #24292E;
+  --color-border-strong: #4A5159;
+
+  color-scheme: dark;
+}
