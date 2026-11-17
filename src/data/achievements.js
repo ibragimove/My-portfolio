@@ -5,7 +5,7 @@
  * Verified details:
  * - IT Park Best Website Competition: 3rd place among 52 participants (2026)
  * - Muhammad Al-Xorazmiy Successors Competition: 3rd place (2024)
- * - Academic: SAT 1520 (Math 800, EBRW 720), IELTS 7.0, GPA 4.9/5.0
+ * - Academic: SAT 1520 (Math 800, EBRW 720), IELTS 7.0
  * =========================================================================
  */
 
@@ -59,19 +59,6 @@ export const achievementsData = {
         { subject: 'Overall Band', score: '7.0', max: '9.0', note: 'C1 Proficient User' },
       ],
       tags: ['Academic English', 'Global Collaboration', 'C1 Level'],
-    },
-    {
-      id: 'gpa',
-      testName: 'High School Academic Standing',
-      compositeScore: '4.9',
-      scale: 'Out of 5.0 GPA',
-      description:
-        'Rigorous academic performance at School No. 40 in Khanka, Khorezm, demonstrating continuous academic excellence across STEM coursework.',
-      breakdown: [
-        { subject: 'Cumulative GPA', score: '4.9', max: '5.0', note: 'Academic Honors' },
-        { subject: 'Target Admission', score: 'Fall 2027', max: 'Undergraduate', note: 'Computer Science' },
-      ],
-      tags: ['School No. 40', 'GPA 4.9/5.0', 'Fall 2027 Applicant'],
     },
   ],
 };

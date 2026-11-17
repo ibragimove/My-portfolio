@@ -23,7 +23,7 @@ import {
  * Achievements Section — Elbek Ibragimov
  * Separated into two distinct, verified groups:
  * 1. Competition Achievements (IT Park [2026] & Muhammad Al-Xorazmiy [2024])
- * 2. Academic Profile (SAT: 1520 [Math: 800], IELTS: 7.0, GPA: 4.9/5.0)
+ * 2. Academic Profile (SAT: 1520 [Math: 800], IELTS: 7.0)
  * Styled with Midnight × Electric Orange cards and zero invented metrics.
  */
 export const Achievements = () => {
@@ -126,12 +126,12 @@ export const Achievements = () => {
                 Academic Profile & Standardized Testing
               </h3>
               <p className="font-sans text-xs text-content-secondary">
-                Quantitative academic benchmarks validating mathematical aptitude, English communication, and high school excellence
+                Quantitative standardized examination benchmarks validating mathematical aptitude and English communication
               </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* SAT Card */}
             <article className="rounded-2xl border border-accent-border/60 bg-gradient-to-br from-surface via-surface to-accent-subtle/20 p-6 sm:p-7 transition-all duration-normal hover:border-accent-border hover:shadow-card hover:shadow-accent-glow flex flex-col justify-between">
               <div>
@@ -271,64 +271,6 @@ export const Achievements = () => {
               <div className="pt-4 border-t border-border flex flex-wrap gap-1.5">
                 <MonoLabel variant="accent">Overall: 7.0</MonoLabel>
                 <MonoLabel variant="default">C1 Equivalent</MonoLabel>
-              </div>
-            </article>
-
-            {/* GPA & School Academic Card */}
-            <article className="rounded-2xl border border-border bg-surface p-6 sm:p-7 transition-all duration-normal hover:border-accent-border hover:shadow-card hover:shadow-accent-glow flex flex-col justify-between">
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-accent" />
-                    <span className="font-mono text-xs font-semibold uppercase text-accent tracking-wider">
-                      School Academic Standing
-                    </span>
-                  </div>
-                  <Badge variant="accent" size="sm">
-                    School No. 40
-                  </Badge>
-                </div>
-
-                <h4 className="font-heading font-bold text-xl text-content tracking-tight mb-1">
-                  High School GPA
-                </h4>
-                <p className="font-sans text-xs text-content-secondary leading-relaxed mb-6">
-                  School No. 40, Khanka, Khorezm · Rigorous academic coursework in mathematics and sciences.
-                </p>
-
-                {/* GPA Display */}
-                <div className="p-4 rounded-xl bg-bg border border-border mb-5 flex items-baseline justify-between">
-                  <div>
-                    <span className="font-mono text-[11px] text-content-muted block uppercase tracking-wider">
-                      Cumulative GPA
-                    </span>
-                    <span className="font-heading font-extrabold text-3xl sm:text-4xl text-content tracking-tight">
-                      4.9{' '}
-                      <span className="text-sm font-mono text-content-muted font-normal">
-                        / 5.0
-                      </span>
-                    </span>
-                  </div>
-                  <Badge variant="solid" size="sm">
-                    Academic Honors
-                  </Badge>
-                </div>
-
-                {/* Target Admission Box */}
-                <div className="p-3.5 rounded-lg bg-surface-hover/70 border border-border text-xs font-sans text-content-secondary leading-relaxed mb-6 space-y-1.5">
-                  <div className="flex items-center gap-1.5 text-content font-semibold text-xs">
-                    <GraduationCap className="w-3.5 h-3.5 text-accent" />
-                    <span>Fall 2027 Undergrad Target</span>
-                  </div>
-                  <p className="text-[11px]">
-                    Preparing for university admission in Computer Science with a focus on Software Engineering or Artificial Intelligence.
-                  </p>
-                </div>
-              </div>
-
-              <div className="pt-4 border-t border-border flex flex-wrap gap-1.5">
-                <MonoLabel variant="accent">GPA: 4.9/5.0</MonoLabel>
-                <MonoLabel variant="default">Fall 2027</MonoLabel>
               </div>
             </article>
           </div>
