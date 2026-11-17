@@ -13,25 +13,27 @@ import {
   ArrowUpRight,
   Database,
   Terminal,
+  HeartPulse,
+  GraduationCap,
+  Lightbulb,
 } from 'lucide-react';
 
 /**
- * Reusable Featured Project Card Component
- * - Large visual media header with graceful screenshot fallback
- * - Displays title, short description, problem, contribution, technologies
- * - GitHub repository & live demo links
- * - Electric Orange interactive highlights
+ * Reusable Featured Project Card Component — Elbek Ibragimov
+ * - Real project presentations with Problem, Contribution, and Learning
+ * - Direct GitHub links to ibragimove repositories
+ * - Electric Orange visual highlights and responsive styling
  */
 export const ProjectCard = ({ project, index }) => {
   const [imageError, setImageError] = useState(!project.image);
   const [imageLoaded, setImageLoaded] = useState(false);
 
-  // Derive a decorative icon based on primary technologies
+  // Derive decorative icon based on project theme
   const getProjectIcon = () => {
+    if (project.id === 'medcare-ai') return HeartPulse;
+    if (project.id === 'sat-alfa') return GraduationCap;
     if (project.technologies.some((t) => t.toLowerCase().includes('sql')))
       return Database;
-    if (project.technologies.some((t) => t.toLowerCase().includes('python')))
-      return Terminal;
     return Layers;
   };
 
@@ -54,7 +56,7 @@ export const ProjectCard = ({ project, index }) => {
             />
           ) : null}
 
-          {/* Elegant Architectural Screenshot Placeholder */}
+          {/* Architectural Project Graphic */}
           {(!project.image || imageError) && (
             <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
               {/* Subtle Tech Grid Pattern */}
@@ -74,23 +76,23 @@ export const ProjectCard = ({ project, index }) => {
               </div>
 
               <div className="relative z-10 space-y-1">
-                <span className="font-heading font-bold text-sm text-content block tracking-tight">
+                <span className="font-heading font-bold text-sm sm:text-base text-content block tracking-tight">
                   {project.title}
                 </span>
                 <span className="font-mono text-[11px] text-accent block">
-                  {project.isPlaceholder ? 'Editable Project Placeholder' : 'Project Preview'}
+                  {project.status || 'Verified Repository'}
                 </span>
               </div>
 
               {/* Tag indicator */}
               <div className="absolute top-3 right-3">
-                <Badge variant={project.isPlaceholder ? 'accent' : 'solid'} size="sm">
-                  {project.isPlaceholder ? 'Template' : 'Active'}
+                <Badge variant="solid" size="sm">
+                  {project.status ? project.status.split('(')[0].trim() : 'Active'}
                 </Badge>
               </div>
 
               <div className="absolute bottom-3 left-3 font-mono text-[10px] text-content-muted">
-                PROJECT_REF // 0{index + 1}
+                PROJECT // 0{index + 1}
               </div>
             </div>
           )}
@@ -102,13 +104,11 @@ export const ProjectCard = ({ project, index }) => {
           <div>
             <div className="flex items-center justify-between gap-2 mb-2">
               <span className="font-mono text-xs font-semibold text-accent uppercase tracking-wider">
-                Featured Work // 0{index + 1}
+                Case Study // 0{index + 1}
               </span>
-              {project.isPlaceholder && (
-                <MonoLabel variant="accent" className="text-[10px]">
-                  Replaceable in data/projects.js
-                </MonoLabel>
-              )}
+              <MonoLabel variant="accent" className="text-[10px]">
+                {project.status ? project.status.split('(')[0].trim() : 'Live'}
+              </MonoLabel>
             </div>
 
             <h3 className="font-heading font-bold text-xl sm:text-2xl text-content tracking-tight group-hover:text-accent transition-colors duration-fast">
@@ -121,7 +121,7 @@ export const ProjectCard = ({ project, index }) => {
           </div>
 
           {/* Deep-Dive Problem & Contribution Callout Blocks */}
-          <div className="space-y-3 pt-2">
+          <div className="space-y-3 pt-1">
             {/* Problem Box */}
             <div className="p-3.5 rounded-lg bg-bg/80 border border-border/80 text-xs font-sans">
               <div className="flex items-center gap-1.5 font-mono text-[11px] font-bold text-content uppercase tracking-wider mb-1">
@@ -143,6 +143,19 @@ export const ProjectCard = ({ project, index }) => {
                 {project.contribution}
               </p>
             </div>
+
+            {/* What I Learned Box */}
+            {project.learning && (
+              <div className="p-3.5 rounded-lg bg-accent-subtle/30 border border-accent-border/40 text-xs font-sans">
+                <div className="flex items-center gap-1.5 font-mono text-[11px] font-bold text-accent uppercase tracking-wider mb-1">
+                  <Lightbulb className="w-3.5 h-3.5 text-accent" />
+                  <span>Key Engineering Takeaway</span>
+                </div>
+                <p className="text-content-secondary leading-relaxed">
+                  {project.learning}
+                </p>
+              </div>
+            )}
           </div>
 
           {/* Technology Badges */}
@@ -194,15 +207,15 @@ export const ProjectCard = ({ project, index }) => {
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           ) : (
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono text-content-muted bg-surface/50 border border-border-subtle cursor-not-allowed">
-              <span>Demo Coming Soon</span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono text-content-muted bg-surface/50 border border-border-subtle">
+              <span>{project.status || 'Active Codebase'}</span>
             </span>
           )}
         </div>
 
         <div className="font-mono text-[11px] text-content-muted flex items-center gap-1">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-          <span>Verified Specs</span>
+          <span>Verified Repository</span>
         </div>
       </div>
     </article>

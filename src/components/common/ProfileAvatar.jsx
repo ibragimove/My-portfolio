@@ -92,7 +92,7 @@ export const ProfileAvatar = ({ className = '' }) => {
         <div className="absolute -bottom-2 sm:bottom-1 right-2 sm:right-4 bg-surface/95 backdrop-blur-md border border-accent-border px-3 py-1 rounded-full shadow-lg flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
           <span className="font-mono text-xs font-semibold text-content">
-            CS · UZ
+            Elbek · UZ
           </span>
         </div>
       </div>

@@ -5,6 +5,7 @@ import {
   ArrowUp,
   Github,
   Linkedin,
+  Youtube,
   Mail,
   MapPin,
   Terminal,
@@ -60,10 +61,7 @@ export const Footer = () => {
                   </span>
                 </div>
                 <span className="tracking-tight text-content font-heading font-bold">
-                  {siteConfig.wordmark.slice(0, 2)}
-                  <span className="text-accent">
-                    {siteConfig.wordmark.slice(2)}
-                  </span>
+                  Elbek<span className="text-accent">.dev</span>
                 </span>
               </a>
 
@@ -125,6 +123,16 @@ export const Footer = () => {
                 </a>
 
                 <a
+                  href={siteConfig.contact.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-lg border border-border bg-surface hover:bg-surface-hover text-content hover:text-accent hover:border-accent flex items-center justify-center transition-colors"
+                  aria-label="YouTube Channel (@talkwithdevs-g4s)"
+                >
+                  <Youtube className="w-4 h-4" />
+                </a>
+
+                <a
                   href={`mailto:${siteConfig.contact.email}`}
                   className="w-9 h-9 rounded-lg border border-border bg-surface hover:bg-surface-hover text-content hover:text-accent hover:border-accent flex items-center justify-center transition-colors"
                   aria-label="Send Email"
@@ -134,7 +142,7 @@ export const Footer = () => {
               </div>
 
               <p className="font-mono text-[11px] text-content-muted pt-2">
-                Replace placeholders in data/siteConfig.js
+                Khanka, Khorezm, Uzbekistan
               </p>
             </div>
           </div>

@@ -12,15 +12,14 @@ import {
   ArrowUpRight,
   Sparkles,
   CheckCircle2,
+  Youtube,
 } from 'lucide-react';
 
 /**
- * Professional Experience Section
- * - Chronological timeline layout
- * - Highlights Talk With Devs (Uzbek IT Podcast, 2 Collaborators, Beginner Tech Education)
- * - Highlights SAT ALFA (Marketing, Social Media, SAT Support Teaching)
- * - Editable dates, optional logo and link placeholders
- * - Zero invented metrics or dates
+ * Professional Experience Section — Elbek Ibragimov
+ * - Chronological timeline layout of real initiatives
+ * - Talk With Devs (~6 months Uzbek IT YouTube channel, 2 collaborators)
+ * - SAT ALFA (~4 months SAT teaching & social media marketing)
  */
 export const Experience = () => {
   const getExperienceIcon = (id) => {
@@ -35,9 +34,9 @@ export const Experience = () => {
         {/* Section Header */}
         <div className="max-w-3xl mb-14">
           <div className="flex items-center gap-2 mb-3">
-            <MonoLabel variant="accent">04 // EXPERIENCE</MonoLabel>
+            <MonoLabel variant="accent">04 // EXPERIENCE & LEADERSHIP</MonoLabel>
             <span className="text-xs font-mono text-content-muted">
-              · Leadership & Community Work
+              · Verified Initiatives
             </span>
           </div>
 
@@ -66,10 +65,10 @@ export const Experience = () => {
 
                 {/* Main Experience Card */}
                 <article className="rounded-2xl border border-border bg-surface p-6 sm:p-8 transition-all duration-normal hover:border-accent-border hover:shadow-card hover:shadow-accent-glow">
-                  {/* Card Header: Role, Organization, and Editable Date */}
+                  {/* Card Header: Role, Organization, and Date */}
                   <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-4 pb-4 border-b border-border">
                     <div className="flex items-start gap-3.5">
-                      {/* Logo or Monogram Placeholder */}
+                      {/* Monogram Box */}
                       <div className="w-12 h-12 rounded-xl bg-accent-subtle border border-accent-border flex items-center justify-center text-accent font-heading font-bold text-lg shrink-0 select-none">
                         {item.organization
                           .split(' ')
@@ -96,7 +95,7 @@ export const Experience = () => {
                       </div>
                     </div>
 
-                    {/* Editable Date Pill */}
+                    {/* Duration Badge */}
                     <div className="self-start sm:self-auto">
                       <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-bg border border-border text-xs font-mono text-content">
                         <Calendar className="w-3.5 h-3.5 text-accent shrink-0" />
@@ -136,7 +135,7 @@ export const Experience = () => {
                     </div>
                   )}
 
-                  {/* Footer: Tags & Optional External Link */}
+                  {/* Footer: Tags & External Link */}
                   <div className="pt-4 border-t border-border flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div className="flex flex-wrap gap-1.5">
                       {item.tags.map((tag) => (
@@ -146,23 +145,19 @@ export const Experience = () => {
                       ))}
                     </div>
 
-                    {/* External Link or Link Placeholder */}
+                    {/* External Link */}
                     <div className="shrink-0">
-                      {item.externalLink ? (
+                      {item.externalLink && (
                         <a
                           href={item.externalLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-xs font-mono text-accent hover:underline"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-accent text-accent-contrast text-xs font-mono font-medium hover:bg-accent-hover transition-colors shadow-xs"
                         >
-                          <span>Visit Channel</span>
+                          {item.id === 'talk-with-devs' && <Youtube className="w-3.5 h-3.5" />}
+                          <span>{item.linkLabel || 'Visit Initiative'}</span>
                           <ArrowUpRight className="w-3.5 h-3.5" />
                         </a>
-                      ) : (
-                        <span className="inline-flex items-center gap-1.5 text-[11px] font-mono text-content-muted">
-                          <ExternalLink className="w-3 h-3" />
-                          <span>Editable link in data/experience.js</span>
-                        </span>
                       )}
                     </div>
                   </div>
@@ -172,7 +167,7 @@ export const Experience = () => {
           })}
         </div>
 
-        {/* Timeline Editing Guide Callout */}
+        {/* Community & Leadership Summary Card */}
         <div className="p-6 rounded-2xl bg-surface border border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 max-w-4xl">
           <div className="flex items-start gap-3">
             <div className="w-9 h-9 rounded-lg bg-accent-subtle border border-accent-border flex items-center justify-center text-accent shrink-0 mt-0.5">
@@ -180,20 +175,16 @@ export const Experience = () => {
             </div>
             <div>
               <span className="font-heading font-semibold text-content text-sm block">
-                Editable Experience Timeline
+                Committed to Tech Education & Community Impact
               </span>
               <p className="font-sans text-xs text-content-secondary mt-0.5">
-                Dates and links are marked for easy replacement in{' '}
-                <code className="font-mono text-accent bg-bg px-1.5 py-0.5 rounded border border-border">
-                  src/data/experience.js
-                </code>
-                . No arbitrary dates or metrics were invented.
+                Balancing rigorous academic preparation with community-driven projects aimed at empowering fellow students in Uzbekistan.
               </p>
             </div>
           </div>
 
           <Badge variant="accent" size="sm" className="shrink-0">
-            2 Verified Experiences
+            Active Contributor
           </Badge>
         </div>
       </Container>

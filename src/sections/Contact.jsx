@@ -13,23 +13,22 @@ import {
   Mail,
   Github,
   Linkedin,
+  Youtube,
   ArrowUpRight,
   Copy,
   Check,
-  Send,
   MapPin,
   Clock,
   Sparkles,
   MessageSquare,
+  GraduationCap,
 } from 'lucide-react';
 
 /**
- * Contact Section
- * - Clear headline & editorial invitation
- * - Explicit editable placeholders for Email, GitHub, LinkedIn
- * - Direct accessible mailto and social link actions
- * - One-click email copy functionality with feedback
- * - Midnight × Electric Orange aesthetic
+ * Contact Section — Elbek Ibragimov
+ * - Verified direct email, GitHub, LinkedIn, and YouTube channels
+ * - Real location: Khanka, Khorezm, Uzbekistan (UTC+5)
+ * - One-click email copy with instant feedback
  */
 export const Contact = () => {
   const [copied, setCopied] = useState(false);
@@ -46,11 +45,11 @@ export const Contact = () => {
       id: 'email',
       icon: Mail,
       title: 'Direct Email',
-      display: siteConfig.contact.emailDisplay,
+      display: siteConfig.contact.email,
       href: `mailto:${siteConfig.contact.email}`,
-      actionLabel: 'Send an Email',
+      actionLabel: 'Send Email',
       secondaryAction: {
-        label: copied ? 'Copied to clipboard' : 'Copy email address',
+        label: copied ? 'Copied' : 'Copy address',
         onClick: handleCopyEmail,
         icon: copied ? Check : Copy,
       },
@@ -59,18 +58,27 @@ export const Contact = () => {
       id: 'github',
       icon: Github,
       title: 'GitHub Repositories',
-      display: siteConfig.contact.githubDisplay,
+      display: 'github.com/ibragimove',
       href: siteConfig.contact.github,
-      actionLabel: 'View GitHub Profile',
+      actionLabel: 'Visit GitHub',
       isExternal: true,
     },
     {
       id: 'linkedin',
       icon: Linkedin,
       title: 'LinkedIn Network',
-      display: siteConfig.contact.linkedinDisplay,
+      display: 'linkedin.com/in/elbek-ibragimov',
       href: siteConfig.contact.linkedin,
-      actionLabel: 'Connect on LinkedIn',
+      actionLabel: 'Connect',
+      isExternal: true,
+    },
+    {
+      id: 'youtube',
+      icon: Youtube,
+      title: 'Talk With Devs Channel',
+      display: 'youtube.com/@talkwithdevs-g4s',
+      href: siteConfig.contact.youtube,
+      actionLabel: 'Watch Podcast',
       isExternal: true,
     },
   ];
@@ -92,13 +100,13 @@ export const Contact = () => {
           </h2>
 
           <p className="font-sans text-base sm:text-lg text-content-secondary leading-relaxed">
-            Whether you want to discuss software engineering, explore human-centric AI initiatives, or talk about collaborative opportunities, my inbox is open.
+            Whether you want to discuss software engineering, human-centered AI initiatives, university research, or collaborative projects, my inbox is always open.
           </p>
         </div>
 
         {/* 2-Column Responsive Contact Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          {/* Left Column (5 columns on desktop): Status, Location & Config Notice */}
+          {/* Left Column (5 columns on desktop): Status, Location & Profile */}
           <div className="lg:col-span-5 space-y-6">
             <Card className="space-y-5">
               <div className="flex items-center gap-3 pb-3 border-b border-border">
@@ -107,10 +115,10 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-heading font-bold text-base text-content">
-                    Availability & Location
+                    Elbek Ibragimov
                   </h3>
                   <span className="font-mono text-xs text-content-muted">
-                    Active Status
+                    Contact & Active Availability
                   </span>
                 </div>
               </div>
@@ -135,33 +143,18 @@ export const Contact = () => {
                   <span>Location: {siteConfig.location}</span>
                 </div>
                 <div className="flex items-center gap-2">
+                  <GraduationCap className="w-3.5 h-3.5 text-accent shrink-0" />
+                  <span>School No. 40 · Fall 2027 Undergrad Applicant</span>
+                </div>
+                <div className="flex items-center gap-2">
                   <Clock className="w-3.5 h-3.5 text-accent shrink-0" />
-                  <span>Timezone: Uzbekistan Standard Time (UTC+5)</span>
+                  <span>Timezone: Uzbekistan Time (UTC+5)</span>
                 </div>
               </div>
             </Card>
-
-            {/* Developer Notice for updating real URLs */}
-            <div className="p-5 rounded-xl bg-surface/50 border border-border text-xs font-sans text-content-secondary space-y-2">
-              <div className="flex items-center gap-2 font-mono font-semibold text-content">
-                <Sparkles className="w-3.5 h-3.5 text-accent" />
-                <span>Editable Contact Config</span>
-              </div>
-              <p>
-                To bind your real email and profile links, update the{' '}
-                <code className="font-mono text-accent bg-bg px-1.5 py-0.5 rounded border border-border">
-                  contact
-                </code>{' '}
-                object in{' '}
-                <code className="font-mono text-accent bg-bg px-1.5 py-0.5 rounded border border-border">
-                  src/data/siteConfig.js
-                </code>
-                . No fake links were generated.
-              </p>
-            </div>
           </div>
 
-          {/* Right Column (7 columns on desktop): Contact Channel Cards */}
+          {/* Right Column (7 columns on desktop): Real Contact Channel Cards */}
           <div className="lg:col-span-7 space-y-4">
             {contactChannels.map((channel) => {
               const ChannelIcon = channel.icon;
@@ -179,7 +172,7 @@ export const Contact = () => {
                       <span className="font-mono text-xs uppercase tracking-wider text-content-muted block">
                         {channel.title}
                       </span>
-                      <span className="font-heading font-bold text-lg text-content group-hover:text-accent transition-colors duration-fast block mt-0.5">
+                      <span className="font-heading font-bold text-base sm:text-lg text-content group-hover:text-accent transition-colors duration-fast block mt-0.5 break-all sm:break-normal">
                         {channel.display}
                       </span>
                     </div>
@@ -196,9 +189,7 @@ export const Contact = () => {
                         className="px-3 py-2 rounded-lg border border-border bg-surface-hover hover:border-accent hover:text-accent text-content-secondary text-xs font-mono transition-colors flex items-center gap-1.5"
                       >
                         <channel.secondaryAction.icon className="w-3.5 h-3.5 text-accent" />
-                        <span className="hidden sm:inline">
-                          {copied ? 'Copied' : 'Copy'}
-                        </span>
+                        <span>{copied ? 'Copied' : 'Copy'}</span>
                       </button>
                     )}
 

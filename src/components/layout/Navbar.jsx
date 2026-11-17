@@ -77,10 +77,7 @@ export const Navbar = () => {
             </span>
           </div>
           <span className="tracking-tight text-content font-heading font-bold">
-            {siteConfig.wordmark.slice(0, 2)}
-            <span className="text-accent">
-              {siteConfig.wordmark.slice(2)}
-            </span>
+            Elbek<span className="text-accent">.dev</span>
           </span>
         </a>
 

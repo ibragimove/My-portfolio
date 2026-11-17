@@ -2,9 +2,6 @@ import React from 'react';
 import {
   Container,
   Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
   Heading,
   Text,
   MonoLabel,
@@ -21,15 +18,15 @@ import {
   GraduationCap,
   Layers,
   Compass,
+  Award,
 } from 'lucide-react';
 import { siteConfig } from '../data';
 
 /**
- * About Section
- * - Thoughtful editorial narrative
- * - Strict fidelity to verified background details
- * - Asymmetrical editorial grid with high-impact pull-quote
- * - Responsive design adhering to typography hierarchy
+ * About Section — Elbek Ibragimov
+ * - Authentic high-school developer story in Elbek's own words
+ * - Verified academic profile (School No. 40, GPA 4.9/5.0, SAT 1520, IELTS 7.0)
+ * - Grounded, mature narrative focused on building practical, human-centered technology
  */
 export const About = () => {
   const verifiedTracks = [
@@ -41,24 +38,25 @@ export const About = () => {
     },
     {
       icon: Code2,
-      title: 'Scripting & Algorithmic Exploration',
-      tags: ['Python (Beginner)', 'Automation'],
-      desc: 'Building foundational experience with Python syntax, logical problem solving, and script design.',
+      title: 'Web Architecture & Modern Interfaces',
+      tags: ['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS'],
+      desc: 'Building responsive, standards-compliant user interfaces with modern styling and semantic structure.',
     },
     {
       icon: Brain,
-      title: 'Software Engineering & AI Focus',
-      tags: ['Software Engineering', 'Human-Centric AI'],
-      desc: 'Actively exploring artificial intelligence principles that amplify human thought and solve tangible problems.',
+      title: 'Python, Django & AI Exploration',
+      tags: ['Python (Beginner)', 'Django', 'Human-Centered AI'],
+      desc: 'Actively exploring Python frameworks, algorithmic problem solving, and artificial intelligence that supports human thinking.',
     },
   ];
 
   const profileFacts = [
-    { label: 'Origin', value: 'Uzbekistan', icon: MapPin },
-    { label: 'Status', value: 'Computer Science Student', icon: GraduationCap },
-    { label: 'Primary Stack', value: 'PHP · MySQL · Python (Beginner)', icon: Layers },
-    { label: 'Focus', value: 'Software Engineering & AI', icon: Compass },
-    { label: 'Core Mission', value: 'Building meaningful technology', icon: Target },
+    { label: 'Origin', value: 'Khanka, Khorezm, Uzbekistan', icon: MapPin },
+    { label: 'Education', value: 'School No. 40 in Khanka, Khorezm', icon: GraduationCap },
+    { label: 'Academic Standing', value: 'GPA: 4.9 / 5.0 (Honors)', icon: Award },
+    { label: 'Standardized Tests', value: 'SAT: 1520 (Math 800) · IELTS: 7.0', icon: Sparkles },
+    { label: 'Target University', value: 'Fall 2027 Undergrad (CS / AI)', icon: Compass },
+    { label: 'Core Mission', value: 'Building solutions that matter', icon: Target },
   ];
 
   return (
@@ -72,11 +70,11 @@ export const About = () => {
           </div>
 
           <h2 className="font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl text-content tracking-tight mb-4">
-            Engineering with curiosity, honesty, and a human-first lens.
+            Curiosity, craftsmanship, and a human-centered approach to technology.
           </h2>
 
           <p className="font-sans text-base sm:text-lg text-content-secondary leading-relaxed">
-            A candid look into my journey from discovering programming in Uzbekistan to exploring software engineering and artificial intelligence.
+            A candid perspective on my development journey from Khanka, Khorezm to exploring software engineering and artificial intelligence.
           </p>
         </div>
 
@@ -95,16 +93,15 @@ export const About = () => {
               </div>
 
               <blockquote className="font-heading font-bold text-lg sm:text-xl text-content leading-snug tracking-tight mb-4">
-                "I believe artificial intelligence should{' '}
+                "I want to become someone who doesn't simply use technology, but{' '}
                 <span className="text-accent underline decoration-accent/40 underline-offset-4">
-                  empower human thinking
-                </span>{' '}
-                rather than replace it."
+                  understands it deeply enough to build solutions that matter.
+                </span>"
               </blockquote>
 
               <div className="pt-4 border-t border-border flex items-center justify-between text-xs font-mono text-content-muted">
-                <span>Core Engineering Philosophy</span>
-                <span className="text-accent font-semibold">Human-First AI</span>
+                <span>Personal Engineering Philosophy</span>
+                <span className="text-accent font-semibold">Elbek Ibragimov</span>
               </div>
             </div>
 
@@ -112,7 +109,7 @@ export const About = () => {
             <Card className="space-y-4">
               <div className="flex items-center justify-between pb-2 border-b border-border">
                 <span className="font-mono text-xs font-bold uppercase text-content tracking-wider">
-                  Profile Snapshot
+                  Academic & Personal Snapshot
                 </span>
                 <Badge variant="accent" size="sm">Verified</Badge>
               </div>
@@ -142,31 +139,22 @@ export const About = () => {
 
           {/* Right Column (7 columns on desktop): Editorial Narrative & Learning Milestones */}
           <div className="lg:col-span-7 space-y-8">
-            {/* Editorial Narrative */}
+            {/* Authentic Narrative in Elbek's Own Voice */}
             <div className="space-y-5 text-content-secondary font-sans leading-relaxed text-base sm:text-lg">
               <p className="text-content font-medium text-lg sm:text-xl leading-relaxed">
-                I am a Computer Science student from Uzbekistan. My path in technology began with a fundamental curiosity: a desire to comprehend how software is constructed from scratch and how lines of code translate into systems that people rely on every day.
+                My interest in programming grew from curiosity about how technology works and how software can solve problems beyond the screen. While studying in Khorezm, I began exploring web development, learning PHP and MySQL and gradually building my technical foundation.
               </p>
 
               <p>
-                My initial practical exposure centered around backend programming with{' '}
-                <strong className="text-content font-semibold">PHP</strong> and relational data management using{' '}
-                <strong className="text-content font-semibold">MySQL</strong>. Building applications with these tools gave me hands-on respect for server-side architecture, relational modeling, and the critical importance of disciplined data persistence.
+                What motivates me most today is the opportunity to create practical technology that addresses real problems in people's everyday lives. Whether designing patient communication workflows for community nurses or building educational platforms for peers, I focus on systems that provide direct, measurable value.
               </p>
 
               <p>
-                As my technical foundation grew, I expanded into{' '}
-                <strong className="text-content font-semibold">Python</strong> at a beginner level. Working with Python has broadened my perspective on modern algorithmic problem-solving and clean engineering practices, providing a flexible playground for experimenting with scripts and automated tasks.
+                I am particularly interested in <strong className="text-content font-semibold">artificial intelligence</strong> and <strong className="text-content font-semibold">human-centered software</strong>: technologies that support people's thinking, improve productivity, and make useful knowledge more accessible. Rather than seeing AI as a replacement for human intellect, I believe its greatest potential lies in expanding human analytical and creative capacity.
               </p>
 
               <p>
-                Currently, I am actively immersing myself in{' '}
-                <strong className="text-content font-semibold">software engineering principles</strong> and the evolving domain of{' '}
-                <strong className="text-content font-semibold">artificial intelligence</strong>. I do not view AI as a novelty or a substitute for critical reasoning; rather, I am convinced that AI should serve as an intellectual multiplier—augmenting human creativity, clarity, and analytical capability.
-              </p>
-
-              <p className="border-l-2 border-accent pl-4 italic text-content font-sans text-base">
-                My overarching motivation is to build practical, well-architected technology that solves meaningful problems and delivers genuine value to people.
+                Currently a student at <strong className="text-content font-semibold">School No. 40 in Khanka, Khorezm</strong>, I am preparing for undergraduate university applications for <strong className="text-content font-semibold">Fall 2027</strong> in Computer Science. My goal is to immerse myself in rigorous university studies in software engineering or artificial intelligence, continuing to build technology that creates lasting impact.
               </p>
             </div>
 
@@ -177,7 +165,7 @@ export const About = () => {
                   Technical Foundation & Active Explorations
                 </span>
                 <span className="font-sans text-xs text-content-secondary">
-                  Transparent breakdown of tools I have worked with and areas I am studying.
+                  Transparent breakdown of tools I build with and areas I am actively studying.
                 </span>
               </div>
 

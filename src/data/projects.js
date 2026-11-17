@@ -1,69 +1,67 @@
 /**
  * =========================================================================
- * FEATURED PROJECTS DATA SOURCE
+ * ELBEK IBRAGIMOV — REAL FEATURED PROJECTS
  * =========================================================================
- * EDITABLE PLACEHOLDERS:
- * Replace the placeholder values below with your real project details.
- *
- * Each project entry supports:
- * - id: unique string identifier
- * - title: Project name
- * - shortDescription: 1-2 sentence overview
- * - problem: The core problem the project solves
- * - contribution: Specific architecture, modules, or features you built
- * - technologies: Array of technology strings
- * - githubUrl: Link to repository (or null / '#' if pending)
- * - liveDemoUrl: Link to live deployment (or null / '#' if pending)
- * - image: Path to local asset or image URL (leave null to show placeholder)
- * - isPlaceholder: Boolean flag (set false once replaced with your project)
+ * 1. SAT ALFA Landing Page Platform
+ * 2. Learning Center Management System
+ * 3. MedCare & Integrated AI Platform
  * =========================================================================
  */
 
 export const projectsData = [
   {
-    id: 'project-1',
-    isPlaceholder: true,
-    title: '[Project 1: Database-Driven Web Application]',
+    id: 'medcare-ai',
+    isPlaceholder: false,
+    title: 'MedCare & Integrated AI Platform',
     shortDescription:
-      'A full-stack web application developed to handle structured data workflows, user inputs, and dynamic server-side rendering.',
+      'A healthcare platform connecting community patronage nurses with patients in rural villages, integrating AI for accessible triage and health communication.',
     problem:
-      'Users frequently face disjointed, manual data entry processes that lead to fragmented records and lack of centralized validation.',
+      'In rural areas, patients often experience communication delays and lack timely access to patronage nurses, leading to delayed medical attention for preventive and routine checkups.',
     contribution:
-      'Designed the relational schema in MySQL, implemented PHP server-side validation and CRUD endpoints, and built a clean, responsive HTML/CSS interface.',
-    technologies: ['PHP', 'MySQL', 'HTML5', 'CSS3'],
-    githubUrl: 'https://github.com/your-username/project-one',
-    liveDemoUrl: 'https://demo.example.com/project-one',
-    image: null, // Replace with '/src/assets/images/projects/project-1.jpg' or external URL
+      'Engineered the core web application, designed patient-nurse communication workflows tailored for village health workers, and integrated AI assistance to help categorize health inquiries and clarify medical guidance.',
+    technologies: ['Integrated AI', 'Python', 'JavaScript', 'HTML5', 'CSS3', 'Healthcare Tech'],
+    githubUrl: 'https://github.com/ibragimove/MedCare',
+    liveDemoUrl: null, // Completed locally, pending deployment
+    image: null,
+    status: 'Completed (Local Dev)',
+    learning:
+      'Learned how to design software specifically for users with limited digital experience and how AI can serve as a supportive tool in community healthcare.',
   },
   {
-    id: 'project-2',
-    isPlaceholder: true,
-    title: '[Project 2: Relational Data Management System]',
+    id: 'sat-alfa',
+    isPlaceholder: false,
+    title: 'SAT ALFA Platform',
     shortDescription:
-      'A structured database management tool engineered for reliable record organization, complex querying, and data consistency.',
+      'A modern web platform developed for SAT ALFA to attract students, present course curricula, and streamline preparation enrollment.',
     problem:
-      'Managing multi-table relational data without structured indexing and foreign key constraints leads to orphan records and query bottlenecks.',
+      'Students preparing for standardized exams often encounter fragmented course information and lack a clear overview of structured preparation resources.',
     contribution:
-      'Structured normalized relational tables, authored optimized JOIN queries, enforced foreign key cascades, and implemented administrative search filters.',
-    technologies: ['MySQL', 'PHP', 'SQL Optimization', 'Database Modeling'],
-    githubUrl: 'https://github.com/your-username/project-two',
-    liveDemoUrl: null, // Set to demo URL or leave null if only repo exists
-    image: null, // Replace with image path or leave null
+      'Developed the full-stack landing page using Python and Django, styled responsive components with Tailwind CSS and JavaScript, and organized course breakdowns and enrollment forms.',
+    technologies: ['Python', 'Django', 'Tailwind CSS', 'JavaScript', 'Web Architecture'],
+    githubUrl: 'https://github.com/ibragimove/SAT-ALFA',
+    liveDemoUrl: null,
+    image: null,
+    status: 'Completed',
+    learning:
+      'Deepened practical understanding of Django request routing, template rendering, and building clean interfaces with Tailwind CSS.',
   },
   {
-    id: 'project-3',
-    isPlaceholder: true,
-    title: '[Project 3: Python Automation & Logic Script]',
+    id: 'learning-center-management',
+    isPlaceholder: false,
+    title: 'Learning Center Management System',
     shortDescription:
-      'An algorithmic Python tool developed to automate repetitive data parsing tasks and practice structured problem solving.',
+      'A full-stack administrative management platform built to simplify student accounting, fee tracking, and lesson scheduling for educational centers.',
     problem:
-      'Manually processing repetitive data files or recurring calculations is error-prone, time-consuming, and difficult to audit.',
+      'Educational centers struggle with manual record keeping across spreadsheets, creating scheduling collisions and billing discrepancies.',
     contribution:
-      'Engineered core Python algorithmic functions, structured modular data handling with dictionaries and lists, and integrated robust error trapping.',
-    technologies: ['Python', 'Algorithmic Logic', 'Data Parsing', 'Automation'],
-    githubUrl: 'https://github.com/your-username/project-three',
-    liveDemoUrl: 'https://demo.example.com/project-three',
-    image: null, // Replace with image path or leave null
+      'Architected the relational database schema in MySQL, authored PHP backend business logic for tuition tracking and timetable organization, and utilized AI development tools to optimize workflows.',
+    technologies: ['PHP', 'Blade', 'MySQL', 'Relational DB', 'AI Assistance'],
+    githubUrl: 'https://github.com/ibragimove/Learning-Center-Management-system',
+    liveDemoUrl: null,
+    image: null,
+    status: 'In Active Development',
+    learning:
+      'Mastered relational schema constraints, financial ledger integrity in MySQL, and integrating AI coding workflows into production logic.',
   },
 ];
 

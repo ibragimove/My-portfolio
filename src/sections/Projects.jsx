@@ -1,15 +1,14 @@
 import React from 'react';
 import { Container, MonoLabel, Badge, Heading, Text } from '../components';
 import { ProjectCard } from '../components/projects/ProjectCard';
-import { projectsData } from '../data';
-import { Sparkles, FolderGit2, ArrowUpRight, HelpCircle } from 'lucide-react';
+import { projectsData, siteConfig } from '../data';
+import { Sparkles, FolderGit2, ArrowUpRight, Github } from 'lucide-react';
 
 /**
- * Featured Projects Section
- * - High-impact visual project cards
- * - Clear Problem and Technical Contribution breakdowns
- * - 3 Editable placeholders marked in data/projects.js
- * - Responsive grid with attractive Midnight × Electric Orange hover states
+ * Featured Projects Section — Elbek Ibragimov
+ * - 3 Real Verified Projects (MedCare, SAT ALFA, Learning Center Management)
+ * - Links to Elbek's actual GitHub repositories (github.com/ibragimove)
+ * - Deep dive into problem addressed, contribution, and key learning
  */
 export const Projects = () => {
   return (
@@ -29,7 +28,7 @@ export const Projects = () => {
           </h2>
 
           <p className="font-sans text-base sm:text-lg text-content-secondary leading-relaxed">
-            A showcase of software projects developed to address real functional problems. Each entry details the challenge, architectural decisions, and specific technical contributions.
+            Real software projects developed to address real functional problems—from community healthcare access in rural villages to educational management and standardized test preparation.
           </p>
         </div>
 
@@ -40,7 +39,7 @@ export const Projects = () => {
           ))}
         </div>
 
-        {/* Developer Editing Note Callout */}
+        {/* GitHub Repository Showcase Banner */}
         <div className="p-6 rounded-2xl bg-surface border border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-start gap-3">
             <div className="w-9 h-9 rounded-lg bg-accent-subtle border border-accent-border flex items-center justify-center text-accent shrink-0 mt-0.5">
@@ -49,29 +48,35 @@ export const Projects = () => {
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-heading font-semibold text-content text-sm">
-                  Developer Notice: Ready for Custom Project Data
+                  Open-Source Code on GitHub
                 </span>
                 <Badge variant="accent" size="sm">
-                  3 Placeholders Active
+                  Verified Repositories
                 </Badge>
               </div>
               <p className="font-sans text-xs text-content-secondary mt-1">
-                To replace these templates with your real projects, update{' '}
-                <code className="font-mono text-accent bg-bg px-1.5 py-0.5 rounded border border-border">
-                  src/data/projects.js
-                </code>{' '}
-                and optionally add screenshot images.
+                Explore the complete source code, commits, and implementation details for these projects at{' '}
+                <a
+                  href={siteConfig.links.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-accent hover:underline"
+                >
+                  github.com/ibragimove
+                </a>
+                .
               </p>
             </div>
           </div>
 
           <a
-            href="https://github.com"
+            href={siteConfig.links.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-mono font-medium text-content bg-surface-hover hover:bg-surface border border-border hover:border-accent hover:text-accent transition-colors shrink-0"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-mono font-medium text-accent-contrast bg-accent hover:bg-accent-hover shadow-xs transition-colors shrink-0"
           >
-            <span>Browse All Repositories</span>
+            <Github className="w-3.5 h-3.5" />
+            <span>Browse GitHub Profile</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
         </div>

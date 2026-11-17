@@ -1,36 +1,37 @@
 /**
  * =========================================================================
- * ACHIEVEMENTS & ACADEMIC PROFILE DATA SOURCE
+ * ELBEK IBRAGIMOV — ACHIEVEMENTS & ACADEMIC PROFILE
  * =========================================================================
- * Strictly implements verified details:
- * 1. IT Park Best Website Competition — 3rd place among 52 participants
- * 2. Muhammad Al-Xorazmiy successors competition — 3rd place
- * 3. SAT: 1520 (Math: 800, EBRW: 720)
- * 4. IELTS: 7.0
+ * Verified details:
+ * - IT Park Best Website Competition: 3rd place among 52 participants (2026)
+ * - Muhammad Al-Xorazmiy Successors Competition: 3rd place (2024)
+ * - Academic: SAT 1520 (Math 800, EBRW 720), IELTS 7.0, GPA 4.9/5.0
  * =========================================================================
  */
 
 export const achievementsData = {
   competitions: [
     {
-      id: 'it-park-website',
+      id: 'it-park-website-2026',
       title: 'IT Park Best Website Competition',
       award: '3rd Place',
-      rankHighlight: 'Among 52 Participants',
+      year: '2026',
+      rankHighlight: '3rd of 52 Participants (2026)',
       organization: 'IT Park Uzbekistan',
       description:
-        'Awarded 3rd place in the national Best Website Competition organized by IT Park Uzbekistan, competing against 52 technical participants.',
-      tags: ['Web Engineering', 'Competitive Coding', 'Top 3 Finalist'],
+        'Awarded 3rd place in the national Best Website Competition organized by IT Park Uzbekistan in 2026, recognized for responsive engineering, performance, and clean design among 52 competing participants.',
+      tags: ['Web Engineering', 'Competitive Coding', 'Top 3 Finalist', '2026'],
     },
     {
-      id: 'al-xorazmiy-successors',
+      id: 'al-xorazmiy-successors-2024',
       title: 'Muhammad Al-Xorazmiy Successors Competition',
       award: '3rd Place',
-      rankHighlight: 'National Honors',
+      year: '2024',
+      rankHighlight: 'National Honors (2024)',
       organization: 'Al-Xorazmiy Successors Initiative',
       description:
-        'Secured 3rd place in the prestigious Muhammad Al-Xorazmiy successors competition, celebrating analytical problem solving and algorithmic potential.',
-      tags: ['Algorithmic Thinking', 'STEM', 'Successors Initiative'],
+        'Secured 3rd place in the prestigious 2024 Muhammad Al-Xorazmiy successors competition, celebrating analytical problem solving and algorithmic reasoning named in honor of the historical mathematician.',
+      tags: ['Algorithmic Thinking', 'STEM', 'Successors Initiative', '2024'],
     },
   ],
   academics: [
@@ -40,12 +41,12 @@ export const achievementsData = {
       compositeScore: '1520',
       scale: 'Out of 1600',
       description:
-        'Standardized examination assessing mathematical reasoning, analytical reading, and writing proficiency.',
+        'Standardized examination assessing mathematical problem solving, evidence-based reading, and analytical writing.',
       breakdown: [
-        { subject: 'Mathematics', score: '800', max: '800', note: 'Perfect Score' },
-        { subject: 'EBRW (Reading & Writing)', score: '720', max: '800', note: 'Advanced' },
+        { subject: 'Mathematics', score: '800', max: '800', note: 'Perfect Score (800/800)' },
+        { subject: 'EBRW (Reading & Writing)', score: '720', max: '800', note: 'Advanced Analytical' },
       ],
-      tags: ['Mathematics 800/800', 'Analytical Reasoning'],
+      tags: ['Mathematics 800/800', 'Analytical Reasoning', 'Top 1% Global'],
     },
     {
       id: 'ielts',
@@ -53,11 +54,24 @@ export const achievementsData = {
       compositeScore: '7.0',
       scale: 'Overall Band Score',
       description:
-        'International English Language Testing System certifying advanced operational fluency, academic reading, and communication.',
+        'International English Language Testing System certifying advanced academic communication and analytical reading fluency.',
       breakdown: [
         { subject: 'Overall Band', score: '7.0', max: '9.0', note: 'C1 Proficient User' },
       ],
-      tags: ['Academic English', 'Global Communication'],
+      tags: ['Academic English', 'Global Collaboration', 'C1 Level'],
+    },
+    {
+      id: 'gpa',
+      testName: 'High School Academic Standing',
+      compositeScore: '4.9',
+      scale: 'Out of 5.0 GPA',
+      description:
+        'Rigorous academic performance at School No. 40 in Khanka, Khorezm, demonstrating continuous academic excellence across STEM coursework.',
+      breakdown: [
+        { subject: 'Cumulative GPA', score: '4.9', max: '5.0', note: 'Academic Honors' },
+        { subject: 'Target Admission', score: 'Fall 2027', max: 'Undergraduate', note: 'Computer Science' },
+      ],
+      tags: ['School No. 40', 'GPA 4.9/5.0', 'Fall 2027 Applicant'],
     },
   ],
 };

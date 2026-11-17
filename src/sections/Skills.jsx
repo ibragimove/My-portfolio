@@ -22,41 +22,41 @@ import {
 } from 'lucide-react';
 
 /**
- * Technical Skills Section
- * - Grouped logically into Backend & Databases, Web Architecture, and Algorithmic Scripting
- * - Features PHP, MySQL, Python, HTML, CSS
+ * Technical Skills Section — Elbek Ibragimov
+ * - Grouped logically into Backend & Databases, Web Architecture, and Python / Django
+ * - Features PHP, MySQL, JavaScript, HTML, CSS, Python, Django
+ * - Accurately differentiates Primary skills from Beginner / Active Exploration
  * - Zero artificial percentage bars or exaggerated claims
- * - Accessible semantic <article> cards with Midnight × Electric Orange styling
  */
 export const Skills = () => {
   const skillGroups = [
     {
       id: 'backend',
       title: 'Backend & Relational Data Systems',
-      subtitle: 'Server-side application logic and structured database management',
+      subtitle: 'Primary stack: Server-side logic, data modeling, and database persistence',
       icon: Server,
       skills: [
         {
           name: 'PHP',
           icon: Server,
           role: 'Backend Engineering',
-          status: 'Working Knowledge',
+          status: 'Primary · Working Knowledge',
           statusVariant: 'accent',
           description:
-            'Server-side application development, handling incoming HTTP requests, session lifecycle, and creating dynamic data-driven web pages.',
+            'Server-side application development, handling incoming HTTP requests, session lifecycle, routing, and creating dynamic data-driven web pages.',
           concepts: [
             'Server-Side Logic',
             'Form Handling & Validation',
             'Session Management',
             'CRUD Workflows',
-            'API Integration',
+            'Blade / Templating',
           ],
         },
         {
           name: 'MySQL',
           icon: Database,
           role: 'Relational Database',
-          status: 'Relational Modeling',
+          status: 'Primary · Database Modeling',
           statusVariant: 'accent',
           description:
             'Structured database design, establishing relational integrity across tables, formulating optimized SQL queries, and handling data persistence.',
@@ -64,7 +64,7 @@ export const Skills = () => {
             'Relational Schemas',
             'Primary & Foreign Keys',
             'Complex JOIN Queries',
-            'Data Normalization',
+            'Data Integrity & Normalization',
             'ACID Principles',
           ],
         },
@@ -72,48 +72,64 @@ export const Skills = () => {
     },
     {
       id: 'web',
-      title: 'Core Web Architecture',
-      subtitle: 'Semantic document structure and responsive visual styling',
+      title: 'Web Architecture & User Interfaces',
+      subtitle: 'Primary stack: Semantic document structure, styling, and client-side logic',
       icon: Layers,
       skills: [
         {
-          name: 'HTML',
+          name: 'HTML5',
           icon: FileCode,
           role: 'Document Semantics',
-          status: 'Core Standard',
+          status: 'Primary · Core Standard',
           statusVariant: 'secondary',
           description:
             'Constructing robust, accessible document outlines using modern semantic elements, clean DOM hierarchies, and standards-compliant markup.',
           concepts: [
             'Semantic Landmarks',
-            'Document Outlines',
-            'Accessible Forms',
-            'DOM Structure',
-            'Clean Metadata',
+            'Accessible Document Outlines',
+            'Form Controls & Validation',
+            'Clean DOM Hierarchy',
+            'SEO Standards',
           ],
         },
         {
-          name: 'CSS',
+          name: 'CSS3 & Tailwind',
           icon: Palette,
           role: 'Visual Architecture',
-          status: 'Modern Layouts',
+          status: 'Primary · Modern Layouts',
           statusVariant: 'secondary',
           description:
-            'Crafting responsive user interfaces using Flexbox and CSS Grid, implementing design tokens and CSS variables, and building fluid layouts.',
+            'Crafting responsive user interfaces using Flexbox, CSS Grid, custom design tokens, theme switching, and utility-first Tailwind CSS.',
           concepts: [
             'Flexbox & CSS Grid',
-            'Design Tokens & Variables',
+            'Design Tokens & CSS Variables',
             'Responsive Breakpoints',
             'State & Transitions',
-            'Reduced Motion Safety',
+            'Tailwind CSS Framework',
+          ],
+        },
+        {
+          name: 'JavaScript',
+          icon: Code2,
+          role: 'Client-Side Scripting',
+          status: 'Primary · Interactive Logic',
+          statusVariant: 'secondary',
+          description:
+            'Implementing client-side interactivity, asynchronous request handling, DOM manipulation, and dynamic user interface state.',
+          concepts: [
+            'DOM Manipulation',
+            'Event Handling',
+            'Async / Fetch API',
+            'Component Logic',
+            'UI State Management',
           ],
         },
       ],
     },
     {
       id: 'scripting',
-      title: 'Algorithmic Scripting & Horizons',
-      subtitle: 'Problem solving, automation, and foundational AI exploration',
+      title: 'Python, Django & Algorithmic Exploration',
+      subtitle: 'Beginner / Active exploration: Frameworks, problem solving, and AI foundations',
       icon: Cpu,
       skills: [
         {
@@ -128,8 +144,24 @@ export const Skills = () => {
             'Core Python Syntax',
             'Data Structures (Lists, Dicts)',
             'Algorithmic Logic',
-            'Automation Scripts',
-            'AI Exploration Groundwork',
+            'Script Automation',
+            'Foundations for AI',
+          ],
+        },
+        {
+          name: 'Django',
+          icon: Server,
+          role: 'Web Framework',
+          status: 'Beginner · Active Exploration',
+          statusVariant: 'accent',
+          description:
+            'Building structured web applications with Django MVT architecture, ORM models, URL dispatching, and backend view logic (demonstrated in SAT ALFA).',
+          concepts: [
+            'Django MVT Pattern',
+            'URL Routing & Views',
+            'Template Inheritance',
+            'Forms & Models',
+            'Backend Integration',
           ],
         },
       ],
@@ -144,7 +176,7 @@ export const Skills = () => {
           <div className="flex items-center gap-2 mb-3">
             <MonoLabel variant="accent">02 // TECHNICAL SKILLS</MonoLabel>
             <span className="text-xs font-mono text-content-muted">
-              · Practical Toolkit
+              · Practical Toolkit & Honest Proficiency
             </span>
           </div>
 
@@ -181,8 +213,8 @@ export const Skills = () => {
                 {/* Skill Cards Grid (Semantic <article> elements) */}
                 <div
                   className={`grid grid-cols-1 ${
-                    group.skills.length > 1
-                      ? 'md:grid-cols-2'
+                    group.skills.length >= 2
+                      ? 'md:grid-cols-2 lg:grid-cols-3'
                       : 'md:grid-cols-1 max-w-2xl'
                   } gap-6`}
                 >
@@ -215,7 +247,7 @@ export const Skills = () => {
                               size="sm"
                               className="shrink-0"
                             >
-                              {skill.status}
+                              {skill.status.split('·')[0].trim()}
                             </Badge>
                           </div>
 
@@ -273,11 +305,11 @@ export const Skills = () => {
             <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto shrink-0 font-mono text-xs text-content-secondary">
               <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-bg border border-border w-full sm:w-auto justify-center">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                <span>Verified Stack</span>
+                <span>Primary: PHP & MySQL</span>
               </div>
               <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-bg border border-border w-full sm:w-auto justify-center">
                 <Sparkles className="w-4 h-4 text-accent" />
-                <span>Active Learner</span>
+                <span>Active: Python & Django</span>
               </div>
             </div>
           </div>

@@ -16,17 +16,16 @@ import {
   User,
   Github,
   Linkedin,
-  Code2,
-  Cpu,
+  Youtube,
+  GraduationCap,
   Sparkles,
 } from 'lucide-react';
 
 /**
- * Hero Section
- * - High-impact personal introduction
- * - Dedicated Profile Avatar with Electric Orange accent frame and fallback
- * - Subtle animated technical background
- * - Primary CTAs and social links
+ * Hero Section — Elbek Ibragimov
+ * - High-impact personal introduction for an ambitious high-school developer
+ * - Dedicated Profile Avatar with Electric Orange accent frame
+ * - Direct links to GitHub, LinkedIn, and YouTube
  */
 export const Hero = () => {
   return (
@@ -62,17 +61,17 @@ export const Hero = () => {
           }}
         />
 
-        {/* Subtle Tech Crosshairs / Coordinates */}
+        {/* Technical Geographic Coordinates for Khorezm, Uzbekistan */}
         <div className="hidden lg:block absolute top-20 right-16 font-mono text-[10px] text-content-muted tracking-wider">
-          LAT: 41.2995° N · LON: 69.2401° E [UZ]
+          LAT: 41.4789° N · LON: 60.7783° E [Khorezm, UZ]
         </div>
       </div>
 
       <Container className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          {/* Left Column: Headline, Bio & CTAs (7 columns on desktop) */}
+          {/* Left Column: Personal Title, Bio & CTAs (7 columns on desktop) */}
           <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1">
-            {/* Small Uzbekistan Location & Status Label */}
+            {/* Location & Academic Standing Badge */}
             <div className="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface border border-border shadow-xs text-xs font-mono text-content-secondary">
                 <MapPin className="w-3.5 h-3.5 text-accent" />
@@ -80,10 +79,15 @@ export const Hero = () => {
               </div>
 
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-mono text-emerald-400">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Available for opportunities</span>
+                <GraduationCap className="w-3.5 h-3.5 text-emerald-400" />
+                <span>Fall 2027 CS Undergrad Applicant</span>
               </div>
             </div>
+
+            {/* Author Name Eyebrow */}
+            <span className="font-mono text-sm sm:text-base font-semibold text-accent tracking-wide uppercase mb-2 block">
+              {siteConfig.fullName}
+            </span>
 
             {/* Main Headline */}
             <h1 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-content tracking-tight leading-[1.1] mb-6">
@@ -123,16 +127,16 @@ export const Hero = () => {
               </a>
             </div>
 
-            {/* Social Links & Technical Badges */}
+            {/* Real Social Links & Academic Focus Pills */}
             <div className="pt-6 border-t border-border/80 w-full flex flex-col sm:flex-row items-center justify-between gap-4">
-              {/* GitHub and LinkedIn Placeholders */}
+              {/* GitHub, LinkedIn, and YouTube Links */}
               <div className="flex items-center gap-2">
                 <a
                   href={siteConfig.links.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border bg-surface text-xs font-mono text-content-secondary hover:text-content hover:border-accent hover:bg-surface-hover transition-colors duration-fast"
-                  aria-label="GitHub Profile Placeholder"
+                  aria-label="GitHub Profile (ibragimove)"
                 >
                   <Github className="w-3.5 h-3.5 text-accent" />
                   <span>GitHub</span>
@@ -143,14 +147,25 @@ export const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border bg-surface text-xs font-mono text-content-secondary hover:text-content hover:border-accent hover:bg-surface-hover transition-colors duration-fast"
-                  aria-label="LinkedIn Profile Placeholder"
+                  aria-label="LinkedIn Profile"
                 >
                   <Linkedin className="w-3.5 h-3.5 text-accent" />
                   <span>LinkedIn</span>
                 </a>
+
+                <a
+                  href={siteConfig.links.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border bg-surface text-xs font-mono text-content-secondary hover:text-content hover:border-accent hover:bg-surface-hover transition-colors duration-fast"
+                  aria-label="YouTube Channel (@talkwithdevs-g4s)"
+                >
+                  <Youtube className="w-3.5 h-3.5 text-accent" />
+                  <span>YouTube</span>
+                </a>
               </div>
 
-              {/* Technical Domain Badges */}
+              {/* Technical & Academic Badges */}
               <div className="flex flex-wrap items-center justify-center gap-1.5">
                 <MonoLabel variant="muted">Software Engineering</MonoLabel>
                 <MonoLabel variant="accent">Artificial Intelligence</MonoLabel>
