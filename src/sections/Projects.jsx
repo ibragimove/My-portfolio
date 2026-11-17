@@ -6,7 +6,7 @@ import { Sparkles, FolderGit2, ArrowUpRight, Github } from 'lucide-react';
 
 /**
  * Featured Projects Section — Elbek Ibragimov
- * - 3 Real Verified Projects (MedCare, SAT ALFA, Learning Center Management)
+ * - 2 Real Verified Projects (SAT ALFA, MedCare)
  * - Links to Elbek's actual GitHub repositories (github.com/ibragimove)
  * - Deep dive into problem addressed, contribution, and key learning
  */
@@ -33,7 +33,7 @@ export const Projects = () => {
         </div>
 
         {/* Responsive Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 items-stretch">
           {projectsData.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}

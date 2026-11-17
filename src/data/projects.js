@@ -2,31 +2,12 @@
  * =========================================================================
  * ELBEK IBRAGIMOV — REAL FEATURED PROJECTS
  * =========================================================================
- * 1. SAT ALFA Landing Page Platform
- * 2. Learning Center Management System
- * 3. MedCare & Integrated AI Platform
+ * 1. SAT ALFA Platform (Python, Django, Tailwind CSS)
+ * 2. MedCare & Integrated AI Platform (Integrated AI, Python, Healthcare Tech)
  * =========================================================================
  */
 
 export const projectsData = [
-  {
-    id: 'medcare-ai',
-    isPlaceholder: false,
-    title: 'MedCare & Integrated AI Platform',
-    shortDescription:
-      'A healthcare platform connecting community patronage nurses with patients in rural villages, integrating AI for accessible triage and health communication.',
-    problem:
-      'In rural areas, patients often experience communication delays and lack timely access to patronage nurses, leading to delayed medical attention for preventive and routine checkups.',
-    contribution:
-      'Engineered the core web application, designed patient-nurse communication workflows tailored for village health workers, and integrated AI assistance to help categorize health inquiries and clarify medical guidance.',
-    technologies: ['Integrated AI', 'Python', 'JavaScript', 'HTML5', 'CSS3', 'Healthcare Tech'],
-    githubUrl: 'https://github.com/ibragimove/MedCare',
-    liveDemoUrl: null, // Completed locally, pending deployment
-    image: null,
-    status: 'Completed (Local Dev)',
-    learning:
-      'Learned how to design software specifically for users with limited digital experience and how AI can serve as a supportive tool in community healthcare.',
-  },
   {
     id: 'sat-alfa',
     isPlaceholder: false,
@@ -40,28 +21,28 @@ export const projectsData = [
     technologies: ['Python', 'Django', 'Tailwind CSS', 'JavaScript', 'Web Architecture'],
     githubUrl: 'https://github.com/ibragimove/SAT-ALFA',
     liveDemoUrl: null,
-    image: null,
+    image: '/projects/sat-alfa.jpg',
     status: 'Completed',
     learning:
       'Deepened practical understanding of Django request routing, template rendering, and building clean interfaces with Tailwind CSS.',
   },
   {
-    id: 'learning-center-management',
+    id: 'medcare-ai',
     isPlaceholder: false,
-    title: 'Learning Center Management System',
+    title: 'MedCare & Integrated AI Platform',
     shortDescription:
-      'A full-stack administrative management platform built to simplify student accounting, fee tracking, and lesson scheduling for educational centers.',
+      'A healthcare platform connecting community patronage nurses with patients in rural villages, integrating AI for accessible triage and health communication.',
     problem:
-      'Educational centers struggle with manual record keeping across spreadsheets, creating scheduling collisions and billing discrepancies.',
+      'In rural areas, patients often experience communication delays and lack timely access to patronage nurses, leading to delayed medical attention for preventive and routine checkups.',
     contribution:
-      'Architected the relational database schema in MySQL, authored PHP backend business logic for tuition tracking and timetable organization, and utilized AI development tools to optimize workflows.',
-    technologies: ['PHP', 'Blade', 'MySQL', 'Relational DB', 'AI Assistance'],
-    githubUrl: 'https://github.com/ibragimove/Learning-Center-Management-system',
-    liveDemoUrl: null,
-    image: null,
-    status: 'In Active Development',
+      'Engineered the core web application, designed patient-nurse communication workflows tailored for village health workers, and integrated AI assistance to help categorize health inquiries and clarify medical guidance.',
+    technologies: ['Integrated AI', 'Python', 'JavaScript', 'HTML5', 'CSS3', 'Healthcare Tech'],
+    githubUrl: 'https://github.com/ibragimove/MedCare',
+    liveDemoUrl: null, // Completed locally, pending deployment
+    image: '/projects/medcare.jpg',
+    status: 'Completed (Local Dev)',
     learning:
-      'Mastered relational schema constraints, financial ledger integrity in MySQL, and integrating AI coding workflows into production logic.',
+      'Learned how to design software specifically for users with limited digital experience and how AI can serve as a supportive tool in community healthcare.',
   },
 ];
 
