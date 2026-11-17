@@ -40,7 +40,8 @@ export const ProfileAvatar = ({ className = '' }) => {
           {!imageError ? (
             <img
               src={imageSrc}
-              alt="Profile photograph of Computer Science student"
+              alt="Profile photograph of Elbek Ibragimov"
+              style={{ objectPosition: '50% 20%' }}
               className={`w-full h-full object-cover transition-opacity duration-normal ${
                 imageLoaded ? 'opacity-100' : 'opacity-0'
               }`}
